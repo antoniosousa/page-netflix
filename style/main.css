@@ -16,7 +16,7 @@ body {
   /* fundo do site */
   background: var(--preta);
   /* fontes */
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Times, serif;
   color: white;
 }
 
@@ -46,7 +46,8 @@ header nav a:hover {
 /* filme principal */
 .filme-principal {
   font-size: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fundo.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/fundo.jpg");
   /* tamanho da imagem */
   height: 400px;
   background-size: cover;
@@ -58,42 +59,73 @@ header nav a:hover {
 }
 
 .filme-principal .descricao {
-    margin-bottom: 40px;
-    margin-top: 10px;
+  margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 .filme-principal .titulo {
-    margin-top: 15%;
-    font-size: 45px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 15%;
+  font-size: 45px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .botao {
-    background-color: rgba(0,0,0,.50);
-    border: none;
-    color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
 
-    padding: 15px 30px;
-    margin-right: 15px;
-    font-size: 12px;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
 
-    cursor: pointer;
-    transition: .3s ease all;
+  cursor: pointer;
+  transition: 0.3s ease all;
 }
 
 .botao:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .botao i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .container {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .filme-principal .container {
-    width: 70%;
+  width: 70%;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 3px;
+}
+
+
+@media (max-width: 600px){
+    header .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .botao {
+      margin-top: 5px;
+      width: 300px;
+    }
+
+  }
+
+@media (min-width:900px){
+    .descricao {
+        width: 50%;
+    }
 }
